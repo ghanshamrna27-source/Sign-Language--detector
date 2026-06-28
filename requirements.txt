@@ -1,0 +1,25 @@
+# -------------------------------------------------------
+# Pin numpy < 2.0 — mediapipe and tensorflow were compiled
+# against NumPy 1.x and crash at import with NumPy 2.x
+# -------------------------------------------------------
+numpy<2.0
+
+# TensorFlow 2.13 is the last release that works with
+# Python 3.10, numpy<2, and mediapipe 0.10 together
+tensorflow==2.13.0
+
+# MediaPipe 0.10.9 is compatible with TF 2.13 + numpy<2
+mediapipe==0.10.9
+
+# Use headless OpenCV — no display server needed in Docker
+opencv-python-headless==4.8.1.78
+
+# Web framework
+flask==3.0.3
+werkzeug==3.0.3
+
+# Pillow for image utilities used by Keras ImageDataGenerator
+Pillow==10.4.0
+
+# Production WSGI server
+gunicorn==22.0.0
